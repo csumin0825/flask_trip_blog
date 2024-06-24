@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Jekyll v4.1.1" />
+  <title>여행 기록</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
+  <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/blog.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="#">나의 여행기록</a>
+          </div>
+          <div class="col-4 text-center"></div>
+          <div class="col-4 d-flex justify-content-end align-items-center"></div>
+        </div>
+      </header>
+
+      <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-10 px-0">
+          <h2 class="display-4 mb-4">
+            <b>같은 여행지여도 누구랑 함께하느냐에 따라 다르다.</b>
+          </h2>
+          <p class="lead my-3">
+
+          </p>
+          <p class="lead mb-2">
+            {% if user_email != null %} 
+            {{ user_email }} 이메일 주소로 구독중입니다.&nbsp;
+            <a class="btn btn-light" href="/blog/logout" role="button">구독취소</a>
+            {% else %}
+            이메일을 남겨주시면, 새로운 글 업데이트 시 메일을 보내드립니다. &nbsp;
+            <form action="/blog/set_email" method="post">
+              <div class="form-row">
+                <div class="col">
+                  <input type="email" class="form-control" name="user_email">
+                  <input type="hidden" name="blog_id" value="B">
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn btn-primary">구독</button>
+                </div>
+              </div>
+            </form>
+          {% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <div class="blog-post">
+            <h4><b>🌎두 번의 제주도 여행🌎 (22.02 / 22.08)</b></h4>
+            <p>
+              <h5><b>✈️첫 번째 제주도</b></h5>
+              <p>
+                친언니와 둘이 제주도 여행을 갔다. 나는 첫 제주도였지만, 언니는 경험이 있어 계획을 모두 언니에게 맡겼다.<br>
+                2월의 제주도는 유채꽃이 너무 예뻤다.<br>
+                <b>바람이 많이 불었지만, 그마저도 제주도의 매력인 것 같았다.</b>
+              </p>
+              <br>
+              <h5><b>✈️두 번째 제주도</b></h5>
+              <p>
+                엄마와 언니와 두 번째 제주도 여행. 바다 수영하기 딱 좋은 여름이었다.<br>
+                회를 먹지않는 언니를 빼고 엄마와 둘이 고등어, 딱새우 회를 먹었다.<br>
+                <b>제주도의 진짜 매력을 맛본 순간이었다.</b>
+              </p>
+            </p>
+            <br>
+            <hr>
+            <h4><b>🌎세 번의 부산 여행🌎 (22.05 / 23.08 / 24.01)</b></h4>
+            <p>
+              <h5><b>✈️첫 번째 부산</b></h5>
+              <p>
+                짝꿍과의 인생 첫 부산. 겁도 없이 렌트를 했다. 운전에 대해 많이 배웠다.<br>
+                예상치 못한 일 때문에 하루 일찍 올라와서 아쉬움이 남았다.<br>
+                <b>다음에 부산을 또 갈 이유가 생겼다.</b>
+              </p>
+              <br>
+              <h5><b>✈️두 번째 부산</b></h5>
+              <p>
+                친언니, 언니의 친구와 갔다. 이번에도 렌트를 했다.<br>
+                패들보드를 탔다. 중심잡기가 너무 어려워, 의도치 않게 수영실력이 늘었다. <br>
+                <b>그래도 패들보드 위에서 본 광안대교는 최고였다.</b>
+              </p>
+              <br>
+              <h5><b>✈️세 번째 부산</b></h5>
+              <p>
+                친언니와 둘이 갔다. 하루는 콘서트를 보기위한 여행이었다.<br>
+                내가 콘서트를 보는 동안, 언니는 혼자서 칵테일을 즐겼다고 했다.<br>
+                <b>혼자가 더 즐거워보였던 건 기분탓이었을까..</b>
+              </p>
+            </p>
+            <br>
+            <hr>
+            <h4><b>🌎네 번의 강릉 여행🌎 (22.06 / 22.08 / 22.09 / 23.07)</b></h4>
+            <p>
+              <h5><b>✈️첫 번째 강릉</b></h5>
+              <p>
+                가족들과 강릉. 수산 시장을 구경하며, 회와 대게를 직접 골랐다.<br>
+                회, 고기, 대게가 한 상에 올라가있는 것이 어느 예술작품보다 아름다웠다.<br>
+                <b>이것이 바로 현대예술</b>
+              </p>
+              <br>
+              <h5><b>✈️두 번째 강릉</b></h5>
+              <p>
+                약 1년을 다닌 메가박스 퇴사 후, 직접 운전해서 혼자 강릉으로 떠났다.<br>
+                운전은 힘들었지만, 첫 혼자 여행. 내가 좋아하는 음식들을 잔뜩 먹을 수 있었다.<br>
+                <b>인생 커피를 만난 여행이었다.</b>
+              </p>
+              <br>
+              <h5><b>✈️세 번째 강릉</b></h5>
+              <p>
+                강릉에서 짝꿍에게 생일 축하를 받고, 생일 선물을 받고, 생일상을 받았다.<br>
+                운전으로 피곤한 내가 낮잠자는 사이에 생일 축하를 준비하고있었다. <br>
+                <b>인생에서 손꼽는 생일이었다.</b>
+              </p>
+              <br>
+              <h5><b>✈️네 번째 강릉</b></h5>
+              <p>
+                짝꿍과 또 강릉을 가게되었다. 이번에는 직접한 요리가 아니고, 전부 사먹었다.<br>
+                그동안 저장해놨던 맛집들을 골라다녔다.<br>
+                <b>사먹는 것도.. 나쁘지 않을지도?</b>
+              </p>
+            </p>
+            <br>
+            <hr>
+            <h4><b>🌎일곱 번의 일본 여행🌎 (18.12 / 22.01 / 22.01 / 23.03 / 23.03 / 23.06)</b></h4>
+            <p>
+              <h5><b>✈️첫 번째 일본</b></h5>
+              <p>
+                고등학교 친구들과 오사카를 갔다. 생애 첫 해외여행이었다.<br>
+                첫 해외여행에 신나서 너무 많은 기념품을 사오는 바람에 캐리어가 꽉차서 옷을 껴입었던 기억이 있다.<br>
+                <b>돌아오는 공항에서 열이 너무 높다고 검역 카메라에 걸렸다.</b>
+              </p>
+              <br>
+              <h5><b>✈️두 번째 일본</b></h5>
+              <p>
+                중학교 친구들과 도쿄에 갔다. 가장 오래된 친구들인데, 함께 여행간 건 처음이었다.<br>
+                걱정과는 달리 너무 즐거웠다. 날씨요괴인 내가 날씨요정 친구를 이기고 말았다.<br>
+                <b>비가 많이 와서 춥고 속상했다.</b>
+              </p>
+              <br>
+              <h5><b>✈️세 번째 일본</b></h5>
+              <p>
+                대학교 친구들과 해외문화탐사 프로그램으로 도쿄를 갔다. 도쿄에서 귀국한 지 5일만에 다시 도쿄로 출국했다.<br>
+                역시나 흐렸고, 일본의 IT 박람회를 관람했다. <br>
+                <b>외국에서 내가 아는 풍경들이 보이니, 신기했다.</b>
+              </p>
+              <br>
+              <h5><b>✈️네 번째 일본</b></h5>
+              <p>
+                짝꿍과 도쿄를 갔다. 해외여행이 처음인 짝꿍을 일본 네 번째인 내가 이끌어줬다.<br>
+                이때부터 일본인에게 말거는 것이 무섭지 않게 되었다.<br>
+                <b>이때까지는 난 맑은 일본을 한번도 본 적이 없다. 나는야 날씨 요괴</b>
+              </p>
+              <br>
+              <h5><b>✈️다섯 번째 일본</b></h5>
+              <p>
+                친언니와 오사카를 갔다. 도쿄에서 귀국한 지 3일만에 다시 출국했다.<br>
+                이직을 하게 된 언니가 당장 떠나자! 하고 떠난 여행이었다. 처음으로 맑은 하늘의 일본을 보았다. <br>
+                <b>내일 모레 비행기를 예매한 건 신기한 경험이었다.</b>
+              </p>
+              <br>
+              <h5><b>✈️여섯 번째 일본</b></h5>
+              <p>
+                짝꿍과 오사카, 도쿄를 2주 일정으로 떠나게 되었다. 일본의 장마기간이라고 해서 기대를 버리고 우산과 장화를 챙겼지만, 비가 거의 오지않아 맑은 하늘을 볼 수 있었다. <br>
+                일본 영화관에서 애니메이션 영화를 보았다. 반밖에 못 알아들었지만, 행복하고 새로운 경험이었다.<br>
+                <b>일본의 맑은 여름 풍경은 처음이었는데, 또다시 사랑에 빠진 것 같다.</b>
+              </p>
+              <br>
+            </p>
+            <br>
+            <hr>
+            <p style="color:blue">
+              다음 글을 기대해주세요~
+            </p>
+          </div>
+        </div>
+        <!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4>About</h4>
+            <p class="mb-0">
+              작성자는 여행을 좋아합니다. 늘 다른 여행지가 아니어도, 같은 장소를 다른 사람들과 가면 새롭다는 것을 알아가는 중입니다.
+              <a href="https://how-to-train-your-skills.tistory.com/"> (또 다른 블로그) </a> 공부한 내용과 여행에 대한 짧은 후기를 올리는 블로그도 운영 중입니다.
+            </p>
+          </div>
+
+        </aside>
+        <!-- /.blog-sidebar -->
+      </div>
+      <!-- /.row -->
+    </main>
+    <!-- /.container -->
+</body>
+</html>
